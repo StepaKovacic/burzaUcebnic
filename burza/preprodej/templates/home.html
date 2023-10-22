@@ -11,7 +11,7 @@
 		justify-content: space-between;
 		align-items: normal;
 		align-content: normal;
-		width: 50rem;
+		width: 80rem;
 		margin-top: 1rem;
 	  }
 	  
@@ -46,11 +46,15 @@
 			<div>
 				<img src="{{offer.book.img_url}}" class="custom-card-img flex-items  card-img-top img-fluid" >
 			</div>
-			<div class="flex-items  card-body" style="width: 60%;">
-			  <h5 class="card-title">{{offer.book.name}}</h5>
-			  <p class="card-text">Stav knížky : {{offer.state}}</p>
-			  <p class ="card-text">Kontakt: {{offer.contact_info}}</p>
-			  <p class ="card-text">Informace: {{offer.description}}</p>
+			<div class="flex-items  card-body" style="width: 90%;">
+			  <ul class="list-group">
+				  <li class="list-group-item disabled"><b>{{offer.book.name}}</b></li>
+				  <li class="list-group-item">Stav knížky : {{offer.state}}</li>
+				  <li class="list-group-item">Kontakt: {{offer.contact_info}}</li>
+				  <li class="list-group-item">Informace: {{offer.description}}</li>
+				  <li class="list-group-item">Vestibulum at eros</li>
+				</ul>
+
 			</div>
 			<div class ="flex-items">
 			</div>
