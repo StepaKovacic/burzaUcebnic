@@ -13,6 +13,3 @@
 - Chatovací funkce pro uzavírání dohod na výměnu
 - Recenze a hodnocení učebnic a materiálů
 - Uživatelské profily s historií inzerátů a recenzemi
-
-
-### luky nesmrdí. kecám
