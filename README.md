@@ -14,3 +14,5 @@
 - Recenze a hodnocení učebnic a materiálů
 - Uživatelské profily s historií inzerátů a recenzemi
 
+
+### luky nesmrdí. kecám
