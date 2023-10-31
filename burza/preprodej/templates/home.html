@@ -1,67 +1,75 @@
-{%extends "header.html" %}
+{% extends "header.html" %}
 
-{%block content %}
-
-
+{% block content %}
 <style>
-	.flex-container {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-items: normal;
-		align-content: normal;
-		width: 80rem;
-		margin-top: 1rem;
-	  }
-	  
-	  .flex-items {
-		display: block;
-		flex-grow: 0;
-		flex-shrink: 1;
-		flex-basis: auto;
-		align-self: auto;
-		order: 0;
-		text-align: left;
-	  }
-	  p{
-		text-align: left;
-	  }
-	  ul {
-		list-style-type: none;
-	  }
-	  .custom-card-img{
-		height: 15rem;
-		width:auto;
-		position: relative;
-		top: 0;
-		left:0;
-	  }
-</style>
-<center>
-<ul >
-{%for offer in offers %}
-	<li>
-		<div class="card flex-container" >
-			<div>
-				<img src="{{offer.book.img_url}}" class="custom-card-img flex-items  card-img-top img-fluid" >
-			</div>
-			<div class="flex-items  card-body" style="width:70rem;">
-			  <ul class="list-group">
-				  <li class="list-group-item disabled"><b>{{offer.book.name}}</b></li>
-				  <li class="list-group-item">Stav knížky : {{offer.state}}</li>
-				  <li class="list-group-item">Kontakt: {{offer.contact_info}}</li>
-				  <li class="list-group-item">Informace: {{offer.description}}</li>
-				  <li class="list-group-item">Vestibulum at eros</li>
-				</ul>
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: normal;
+        align-content: normal;
+        width: 95%;
+        margin-top: 1rem;
+    }
 
-			</div>
-			<div class ="flex-items">
-			</div>
-		</div>	
-	</li>
-{%endfor%}
-</ul>
+    .flex-items {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        text-align: left;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .custom-card-img {
+        height: 15rem;
+        max-width: 100%;
+        width: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    @media (max-width: 768px) {
+        .custom-card-img {
+            display: none;
+        }
+    }
+</style>
+
+<center>
+    <ul>
+        {% for offer in offers %}
+        <li>
+            <div class="card flex-container">
+                <div>
+                    <img src="{{ offer.book.img_url }}" class="custom-card-img flex-items card-img-top img-fluid">
+                </div>
+                <div class="flex-items card-body" style="width: 70rem;">
+                    <ul class="list-group">
+                        <li class="list-group-item disabled"><b>{{ offer.book.name }}</b></li>
+                        <li class="list-group-item">Stav knížky : {{ offer.state }}</li>
+                        <li class="list-group-item">Kontakt: {{ offer.contact_info }}</li>
+                        <li class="list-group-item">Informace: {{ offer.description }}</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                </div>
+                <div class="flex-items">
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 </center>
 
 
